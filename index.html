@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Genuinely Free AI Tools - Asdale Dynamics</title>
+  <meta name="description" content="A plain-English directory of AI tools that are actually free: chat, image, writing, study, and voice. No affiliate links. Works offline." />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" href="data:," />
+</head>
+<body>
+  <header>
+    <h1>Genuinely Free AI Tools</h1>
+    <p class="lead">
+      A plain-English directory of AI tools for chat, images, writing, study, and voice.
+      Everything here is <strong>actually free</strong> — and where the catch is, we say so.
+      No affiliate links. Nothing earns us a commission.
+    </p>
+    <p class="offline-note">Works offline: save this folder and open <code>index.html</code> any time.</p>
+  </header>
+
+  <section class="controls" aria-label="Filters">
+    <label for="search" class="sr-only">Search tools</label>
+    <input type="search" id="search" placeholder="Search tools, e.g. transcribe, image, local…" autocomplete="off" />
+    <div class="filter-row" role="group" aria-label="Category filter">
+      <button class="filter-btn active" data-category="all">All</button>
+      <button class="filter-btn" data-category="chat">Chat</button>
+      <button class="filter-btn" data-category="image">Image</button>
+      <button class="filter-btn" data-category="writing">Writing</button>
+      <button class="filter-btn" data-category="study">Study</button>
+      <button class="filter-btn" data-category="voice">Voice</button>
+    </div>
+  </section>
+
+  <p id="count" class="count" aria-live="polite"></p>
+  <p id="error" class="error" hidden></p>
+
+  <main>
+    <div id="cards" class="cards"></div>
+    <p id="no-results" class="no-results" hidden>No tools match that search. Try a broader word like “image” or “voice”.</p>
+  </main>
+
+  <footer>
+    <p>
+      Maintained by <strong>Asdale Dynamics, LLC</strong> — Dylan Asdale, RN turned AI author,
+      explaining AI like a friend would. Last verified: <span id="verified"></span>.
+    </p>
+    <p class="fine-print">
+      These are free tiers of third-party services and this directory is not affiliated with them.
+      Free tiers change; each card shows when it was last verified and when to re-check.
+      Nothing here is medical advice, professional advice, or financial advice.
+    </p>
+  </footer>
+
+  <noscript><p class="error">This page needs JavaScript to build its cards from data/tools.json.</p></noscript>
+
+  <script src="data/tools.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
